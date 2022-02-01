@@ -13,7 +13,7 @@ class ma_lab1 {
                 int lineCounter = 0;
                 int tokenCounter = 0;
                 int intCounter = 0;
-                int intSum = 0;
+                long intSum = 0;
                 String[] compares = new String[args.length - 1];
                 int[] count = new int[args.length - 1];
                 if(args.length > 1) 
@@ -30,7 +30,7 @@ class ma_lab1 {
                             catch (Exception e) {}
                             if(compares.length > 0) {
                                 for(int j = 0; j < compares.length; j++) {
-                                    if(compares[j].equals(tokens[i])) 
+                                    if(compares[j].equalsIgnoreCase(tokens[i])) 
                                         count[j]++;
                                 }
                             }
