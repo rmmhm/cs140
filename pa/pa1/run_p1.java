@@ -95,7 +95,7 @@ class run_p1
 		// check if the array is sorted for indices in [lowerBound, upperBound]
 		boolean sortWorked = true;
 		for( int i = lowerBound; i < upperBound; i++ )
-		{
+		{ 
 			if( sortedValues[i] > sortedValues[i+1] )
 			{
 				sortWorked = false;
