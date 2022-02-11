@@ -58,12 +58,36 @@ class ma_p1 {
     public int[] switchTest(int lowerBound, int upperBound, int[] values) {
         int[] cases = new int[11];
         for(int i = lowerBound; i <= upperBound; i++) {
-            if(values[i] <= 8)
-                cases[values[i]]++;
-            else if(values[i] <= 15)
-                cases[9]++;
-            else
-                cases[10]++;
+            switch (values[i]) {
+                case 0: cases[0]++;
+                        break;
+                case 1: cases[1]++;
+                        break; 
+                case 2: cases[2]++;
+                        break;
+                case 3: cases[3]++;
+                        break;
+                case 4: cases[4]++;
+                        break;
+                case 5: cases[5]++;
+                        break;
+                case 6: cases[6]++;
+                        break;
+                case 7: cases[7]++;
+                        break;
+                case 8: cases[8]++;
+                        break;
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                        cases[9]++;
+                        break;
+                default: cases[10]++;
+                        break;
+            }
         }
         return cases;
     }
