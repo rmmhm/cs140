@@ -1,6 +1,6 @@
 class ma_lab3 {
     public static void main(String[] args) {
-        if(args[2] != null)
+        if(args.length > 2)
             encode(args[0], args[1], args[2].equals("y"));
         else
             encode(args[0], args[1], false);
@@ -27,10 +27,13 @@ class ma_lab3 {
                     dq.push(reverse);
                     wordCount++;
                 }
+                String temp = "";
                 while(dq.size() > 0) {
-                    output.print(dq.remove());
-                    output.print(" ");
+                    temp += dq.remove();
+                    temp += " ";
                 }
+                temp = temp.substring(0, temp.length() - 1);
+                output.print(temp);
                 output.print("\n");
                 lineCount++;
             }
