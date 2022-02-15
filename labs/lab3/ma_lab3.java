@@ -33,8 +33,7 @@ class ma_lab3 {
                     temp += " ";
                 }
                 temp = temp.substring(0, temp.length() - 1);
-                output.print(temp);
-                output.print("\n");
+                output.println(temp);
                 lineCount++;
             }
             input.close();
