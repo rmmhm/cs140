@@ -1,0 +1,56 @@
+Name: Ryan Ma
+
+1) the output is 
+  80
+2) what do you add and where do you add it 
+  change <output.write(bytes);> into <output.write(new String(bytes));>
+3) which array type. briefly explain why your choice is the best. 
+  int array, because the largest value bytes can represent is 2^7-1 and the largest value short can represent is 2^15-1, and thus can't store values from [70000, 70190]
+4) the output is
+	a) "22"
+	b) "10110"
+	c) "26"
+	d) "16"
+
+5) what is the minimum size of the byte array 
+  52
+6) the output is 
+  NumberFormatException
+  ArrayIndexOutOfBoundsException
+  NumberFormatException
+  ArrayIndexOutOfBoundsException
+  Exception
+  sum = 5
+7) sum = 
+  5
+8) sum = 
+  10
+9) What operating system and editor are you using for developing programs outside of LN-G103?
+  windows, git bash, vs code
+10) Are you using your own computer or the computers in LN-G103 during activity section?
+  own computer
+11) the output is 
+  0
+  1
+  2
+12) the output is 
+  10
+  1
+  0
+13)  X = , Y = 
+  x = 2
+  y = 11
+14) sum = 
+  8
+15) sum = 
+  4
+16) sum = 
+  16
+17) how many values 
+  80
+18) sum = 
+  15
+19) What programming languages did you know prior to CS 140?
+  java, c, python, css, javascript, not a language but html
+20) What topics are you having difficulty with in CS 140?
+  n/a
