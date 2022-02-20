@@ -2,9 +2,9 @@ class ma_p1 {
     public ma_p1() {}
 
     public int[] selectionSort(int[] values, int lowerBound, int upperBound) {
-        for(int i = lowerBound - 1; i <= upperBound; i++) {
+        for(int i = lowerBound; i < upperBound; i++) {
             int min = i;
-            for(int j = i+1; j < upperBound + 1; j++)
+            for(int j = i+1; j <= upperBound; j++)
                 if(values[j] < values[min])
                     min = j;
             int temp = values[i];
@@ -15,7 +15,7 @@ class ma_p1 {
     }
     public int forLoopTest(int lowerBound, int upperBound, int testValue, int[] values) {
         int count = 0;
-        for(int i = lowerBound; i < upperBound; i++) {
+        for(int i = lowerBound; i <= upperBound; i++) {
             if(values[i] >= testValue)
                 count++;
         }
