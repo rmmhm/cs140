@@ -1,7 +1,18 @@
 class ma_p2 {
-    public ma_p2() {}
+    public static void main(String[] args) {
+        if(args.length == 3) {
+            if(args[0].equals("t2b"))
+                convertTextToBinary(args[1], args[2]);
+            else if(args[0].equals("b2t"))
+                convertBinaryToText(args[1], args[2]);
+            else
+                System.out.println("Invalid arguments");
+        }
+        else  
+            System.out.println("Invalid arguments");
+    }
 
-    public void encodeToBinary(String inputFileName, String outputFileName) {
+    public static void convertTextToBinary(String inputFileName, String outputFileName) {
         try {
             java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(inputFileName)));
             java.io.BufferedReader input1 = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(inputFileName)));   
@@ -10,12 +21,13 @@ class ma_p2 {
             while(input1.readLine() != null)
                 lines++;
             output.writeInt(lines);
+            input1.close();
 
             String line;
             while((line = input.readLine()) != null) {
                 String[] tokens = line.split("\t");
                 if(tokens[0].equals("int")) {
-                    output.writeChars("i");
+                    output.writeChars("i"); 
                     output.writeInt(Integer.parseInt(tokens[1]));
                 }
                 if(tokens[0].equals("long")) {
@@ -55,10 +67,8 @@ class ma_p2 {
                     for(int i = 0; i < values.length; i++)
                         output.writeDouble(Double.parseDouble(values[i]));
                 }
-                output.writeChars("\n");
             }
             input.close();
-            input1.close();
             output.close();
         }
         catch (Exception e) {
@@ -66,7 +76,7 @@ class ma_p2 {
         }
     }
 
-    public void decodeToText(String inputFileName, String outputFileName) {
+    public static void convertBinaryToText(String inputFileName, String outputFileName) {
         try {
             java.io.DataInputStream input = new java.io.DataInputStream(new java.io.FileInputStream(inputFileName));
             java.io.PrintWriter output = new java.io.PrintWriter(outputFileName);
@@ -104,7 +114,7 @@ class ma_p2 {
                     int length = input.readInt();
                     for(int j = 0; j < length; j++) {
                         output.print(input.readInt());
-                        if(j < length-1);
+                        if(j < length-1)
                             output.print(",");
                     }
                 }
@@ -112,9 +122,10 @@ class ma_p2 {
                     output.print("string");
                     output.print("\t");
                     int length = input.readInt();
-                    String s = "";
-                    for(int j = 0; j < length; j++)
-                        s += Character.toString(input.readChar());
+                    byte[] bytes = new byte[length * 2];
+                    for(int j = 0; j < bytes.length; j++)
+                        bytes[j] = input.readByte();
+                    String s = new String(bytes);
                     output.print(s);
                 }
                 if(c == 'e') {
@@ -127,7 +138,9 @@ class ma_p2 {
                             output.print(",");
                     }
                 }
-                output.print(input.readChar());
+                if((blocks > 1) && (i != blocks - 1)) {
+                    output.println();   
+                }
             }
             input.close();
             output.close();
