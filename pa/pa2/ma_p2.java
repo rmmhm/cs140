@@ -122,11 +122,8 @@ class ma_p2 {
                     output.print("string");
                     output.print("\t");
                     int length = input.readInt();
-                    byte[] bytes = new byte[length * 2];
-                    for(int j = 0; j < bytes.length; j++)
-                        bytes[j] = input.readByte();
-                    String s = new String(bytes);
-                    output.print(s);
+                    for(int j = 0; j < length; j++)
+                        output.print(input.readChar());
                 }
                 if(c == 'e') {
                     output.print("double array");
@@ -138,9 +135,7 @@ class ma_p2 {
                             output.print(",");
                     }
                 }
-                if((blocks > 1) && (i != blocks - 1)) {
-                    output.println();   
-                }
+                output.print("\n");   
             }
             input.close();
             output.close();
