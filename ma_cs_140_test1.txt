@@ -1,0 +1,64 @@
+Name: Ryan Ma
+
+1) the output is 
+12
+13
+14
+15
+16
+17
+
+2) the output is 
+false
+true
+
+3) the output is 
+500
+
+4) the output is 
+2000
+
+5) minimum additional edges is 
+4
+
+6) which method(s) 
+all 3
+
+7) which field(s)
+x, y, w
+
+8) your answer
+no
+
+9) the output is
+51
+115
+21
+
+10) the output is
+38
+
+11) the output is
+2
+37
+
+12) the output is
+ABCD
+
+13) the output is 
+5
+66
+200
+
+14) your answer
+no
+
+15) the tests that pass are
+test2, test5
+
+16) the output is 
+52
+
+17) What topics are you having difficulty with in CS 140?
+programming assignments not having anything to check our code outputs with/against sometimes
+
