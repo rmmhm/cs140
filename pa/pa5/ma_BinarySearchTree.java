@@ -100,8 +100,8 @@ public class ma_BinarySearchTree implements BinarySearchTreeFunctions
 	public void postOrderWalk(Node x, java.util.ArrayList<String> list)
 	{
 		if(x != null) {
-			postOrderWalk(x.getLeft());
-			postOrderWalk(x.getRight());
+			postOrderWalk(x.getLeft(), list);
+			postOrderWalk(x.getRight(), list);
 			list.add(x.toString());
 		}
 	}
