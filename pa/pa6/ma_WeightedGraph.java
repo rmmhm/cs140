@@ -1,10 +1,10 @@
-class WeightedGraph {
+class ma_WeightedGraph implements WeightedGraphFunctions {
 
     private java.util.ArrayList<Integer> vertices;
     private java.util.ArrayList<EdgeWithWeight> edges;
     private boolean debugOutput;
 
-    public WeightedGraph() {
+    public ma_WeightedGraph() {
         this.vertices = new java.util.ArrayList<Integer>();
         this.edges = new java.util.ArrayList<EdgeWithWeight>();
         this.debugOutput = false;

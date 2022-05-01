@@ -1,4 +1,4 @@
-class EdgeWithWeight {
+class EdgeWithWeight implements EdgeWithWeightFunctions {
 
     private final Integer fromVertex;
     private final Integer toVertex;

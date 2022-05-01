@@ -1,18 +1,18 @@
-class VertexWithWeight {
+class VertexWithWeight implements VertexWithWeightFunctions {
     
     private final Integer vertex;
-    private Double weight;
+    private double weight;
 
     public VertexWithWeight(int vertex, double weight) {
         this.vertex = vertex;
         this.weight = weight;
     }
 
-    public Integer getVertex() {
+    public int getVertex() {
         return vertex;
     }
 
-    public Double getWeight() {
+    public double getWeight() {
         return weight;
     }
 
