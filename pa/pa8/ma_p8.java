@@ -616,14 +616,14 @@ class ma_p8 {
 		}
 	}
 
-    static class MenuItemActionListener implements java.awt.event.ActionListener {
-		private javax.swing.JMenuItem m;
+    static class MenuItemActionListener implements ActionListener {
+		private JMenuItem m;
 		
-		MenuItemActionListener(javax.swing.JMenuItem m) {
+		MenuItemActionListener(JMenuItem m) {
 			this.m = m;
 		}
 		
-		public void actionPerformed(java.awt.event.ActionEvent e) {
+		public void actionPerformed(ActionEvent e) {
 			System.out.println("action performed on " + m.getText() + " menu item");
 			
 			switch(m.getText()) {
